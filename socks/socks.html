@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Socks</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+
+
+
+    <style>
+        body {
+            background-image:url(socks\ image.jpg);
+             background-repeat: no-repeat;
+             background-size: cover;
+             padding: 5em;
+        }
+    
+        .socks-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            width: 250px;
+            margin: 0 auto;
+                 
+         }
+
+        .socks-container p {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .socks-container button {
+            font-size: 1rem;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .socks-container button:hover {
+            background-color: #45a049;
+        }
+
+        .socks-container button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+  </head>
+<body>
+    <!-- <div x-data="{ title: 'Hello Alpine' }">
+        <p x-text="title"></p>
+        <button @click="title='Alpine Rocks!'">click me</button>
+    </div> -->
+
+    <!-- <div x-data="{ count: 1 }">
+        <p x-text="count"></p>
+        <button @click="count++">Count Up</button>
+        <button @click="count--">Count Down</button>
+    </div> -->
+
+    <div x-data="{ socks: 'white' }" class="socks-container">
+        <template x-if="socks=='white'">
+            <p>My socks are white</p>
+        </template>
+        <template x-if="socks=='grey'">
+            <p>My socks are grey</p>
+        </template>
+        <button @click="socks = 'grey'">Change Sox</button>
+    </div>
+
+
+    <!-- <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
+        <div x-ref="sentence">I am a sentence</div>
+        <button @click="$refs.sentence.innerText = 'I just changed'">Change Sentence</button>
+    </div>
+
+    <div x-data="{ title: 'AlpineJS is Awesome' }">
+        <p x-text="title"></p>
+        <input type="text" x-model="title">
+    </div>
+
+    <div x-data="{ show: false }">
+        <button @click="show=!show">Show</button>
+        <div x-show="show">Hello</div>
+    </div> -->
+
+
+</body>
+</html>
