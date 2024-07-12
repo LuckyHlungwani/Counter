@@ -19,6 +19,8 @@
             background-color: #f9f9f9;
             width: 300px;
             margin: 0 auto;
+
+            
         }
 
         .grocery-container p {
@@ -50,11 +52,34 @@
         }
 
         body {
-            padding: 4em;
             background-color: mediumpurple;
             background-image: url(./grocery-image.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 5em 0;
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        @media screen and (max-width: 600px) {
+            .grocery-container {
+                width: 90%; 
+                max-width: 100%; 
+            }
+
+            .grocery-container p {
+                font-size: 1.5rem; 
+            }
+
+            .grocery-container li {
+                font-size: 1rem; 
+                padding: 6px 10px; 
+            }
         }
     </style>
 </head>
